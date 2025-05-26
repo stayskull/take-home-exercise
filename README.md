@@ -56,8 +56,8 @@ Before you begin, ensure you have the following installed:
 
 1.  **Clone the repo:**
     ```bash
-    git clone [https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git)
-    cd YOUR_REPO_NAME
+    git clone https://github.com/stayskull/take-home-exercise.git
+    cd take-home-exercise
     ```
 
 2.  **Setup Containerized Environment:**
