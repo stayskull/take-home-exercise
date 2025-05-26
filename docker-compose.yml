@@ -1,0 +1,47 @@
+services:
+  exercisebackend:
+    build:
+      context: ./backend
+      dockerfile: ./devops/Dockerfile
+    ports:
+      - "3500:3500"
+    depends_on:
+      - exercisepostgres
+    volumes:
+      - /app/node_modules 
+    environment:
+      DB_HOST: exercisepostgres
+      DB_USER: web_client
+      DB_PASS: P@ssw0rd
+      DB_NAME: exercise
+  exercisefrontend:
+    build:
+      context: ./frontend
+      dockerfile: ./devops/Dockerfile.production
+    ports:
+      - "3000:3000" 
+    depends_on:
+      - exercisebackend
+    volumes:
+      - ./frontend:/app 
+      - /app/node_modules 
+    environment:
+      # NEXT_PUBLIC_BACKEND_URL: http://exercisebackend:3500 
+      # If the above has issues use the below:
+      NEXT_PUBLIC_BACKEND_URL: http://localhost:3500
+      NEXT_PUBLIC_BACKEND_URL_EXTERNAL: http://localhost:3500
+      NODE_ENV: production
+  exercisepostgres:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./postgres/devops/db-init-scripts:/docker-entrypoint-initdb.d
+volumes:
+  postgres-data:
