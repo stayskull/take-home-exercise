@@ -46,6 +46,7 @@ Before you begin, ensure you have the following installed:
 
 * [Git](https://github.com/git-guides/install-git)
 * [Docker](https://www.docker.com/products/docker-desktop/)
+* [Node 22](https://nodejs.org/en)
 * An API Key for your chosen LLM provider (e.g., OpenAI API Key, Groq API Key)
 * Make sure nothing is running on ports 3000, 3500, and 5432
     ```bash
@@ -60,15 +61,23 @@ Before you begin, ensure you have the following installed:
     cd take-home-exercise
     ```
 
-2.  **Setup Containerized Environment:**
+3.  **Build the Frontend (issues with the multistage container build):**
+    ```bash
+    cd frontend
+    npm install
+    npm run build
+    cd ..
+    ```
+
+4.  **Setup Containerized Environment:**
     ```bash
     docker compose up --build
     ```
 
-3.  **Access the Frontend:**
+5.  **Access the Frontend:**
     [Navigate to the Frontend](http://localhost:3000)
 
-4.  **When You Are All Done - Clean Up (including database data):**
+6.  **When You Are All Done - Clean Up (including database data):**
     ```bash
     docker compose down -v
     ```    
