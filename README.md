@@ -108,8 +108,8 @@ When you launch the frontend, make sure you setup a new company or modify the ac
 
 ## Contact
 
-*Your Name - [Jason Stejskal](https://www.linkedin.com/in/jason-stejskal)
-*Your Email - jdstejskal@gmail.com
+* Your Name - [Jason Stejskal](https://www.linkedin.com/in/jason-stejskal)
+* Your Email - jdstejskal@gmail.com
 
 ---
 
