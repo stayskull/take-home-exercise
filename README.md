@@ -1,4 +1,4 @@
-## Table of Contents
+<img width="596" height="126" alt="image" src="https://github.com/user-attachments/assets/7052abdc-bb14-40e6-800c-a577f7ecc183" />## Table of Contents
 
 * [About the Project](#about-the-project)
 * [Features](#features)
@@ -11,9 +11,13 @@
 
 ---
 
+## Project Background
+
+I created this for a job interview and spent about 20 hours on it over 2.5 days on actual coding after spending 2 days of "prep" (deciding what I wanted the experience to be). A LOT can be done to improve it (especially security wise, the api key is already dead and its horrible that the passwords are included in the code) but this project clearly shows what I'm capable of in a few days' time. The goal was to create a persona generation and interaction tool for multiple companies from scratch. There were no constraints so I took the microservice approach to show the breadth of my abilities.
+
 ## About the Project
 
-Customer Persona Experience App — Take-Home Exercise by Jason Stejskal is a quick and dirty full-stack application  designed to create dynamic and emotionally rich AI personas using Large Language Models (LLMs) in a neat, containerized stack. Unlike traditional static personas, this system leverages **Roger Plutchik's Wheel of Emotions** as a foundational framework to imbue personas with a nuanced understanding and expression of emotional states, giving them greater depth and "life."
+Customer Persona Experience App â€” Take-Home Exercise by Jason Stejskal is a quick and dirty full-stack application  designed to create dynamic and emotionally rich AI personas using Large Language Models (LLMs) in a neat, containerized stack. Unlike traditional static personas, this system leverages **Roger Plutchik's Wheel of Emotions** as a foundational framework to imbue personas with a nuanced understanding and expression of emotional states, giving them greater depth and "life."
 
 Primary Architecture:
 
@@ -77,7 +81,10 @@ Before you begin, ensure you have the following installed:
 5.  **Access the Frontend:**
     [Navigate to the Frontend](http://localhost:3000)
 
-6.  **When You Are All Done - Clean Up (including database data):**
+5.  **Setup a new company:**
+When you launch the frontend, make sure you setup a new company or modify the access key. Make sure to setup a new company or modify the existing one through the UI or before you build the project in the file at /postgres/devops/db-init-scripts/0004-insert-data.sql
+
+8.  **When You Are All Done - Clean Up (including database data):**
     ```bash
     docker compose down -v
     ```    
@@ -101,8 +108,8 @@ Before you begin, ensure you have the following installed:
 
 ## Contact
 
-Your Name - [Jason Stejskal](https://www.linkedin.com/in/jason-stejskal)
-Your Email - jdstejskal@gmail.com
+*Your Name - [Jason Stejskal](https://www.linkedin.com/in/jason-stejskal)
+*Your Email - jdstejskal@gmail.com
 
 ---
 
